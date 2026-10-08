@@ -40,3 +40,5 @@ docker build -t edge-cobot-vision .
 docker run -it edge-cobot-vision
 
 ```
+
+#### the project's code is yet to be commented... 
