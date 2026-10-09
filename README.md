@@ -11,7 +11,7 @@ also pixel_text.py can be used for detect pixel points of a certain video in ord
 
 ## System Architecture
 
-* ** `data/` ** keeps the static data to be processed. 
+* `data/`  keeps the static data to be processed. 
 
 * `src/vision.py` handles the video stream. Applies HSV filtering and morphological noise reduction to get the best results. also calculates the moments of the objects that it filtered and draws a border around it and shows the center and coordinates of the object. 
 *  `src/transform.py`  makes a homography transformation to turn 2D pixel information into physical (X,Y) millimeter coordinate for robot base.
@@ -33,7 +33,7 @@ after run the main.py:
 python3 main.py
 ```
 
-##How to deploy
+## How to deploy
 the pipeline fully containerized to be able to deploy it on industrial edge pc's.
 ```bash
 docker build -t edge-cobot-vision .
