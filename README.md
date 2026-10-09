@@ -37,7 +37,7 @@ python3 main.py
 the pipeline fully containerized to be able to deploy it on industrial edge pc's.
 to build the project:
 ```bash
-docker build -t edge-cobot-vision .
+docker build -t edge-cobot-vision-robot-pipeline .
 
 ```
 after that run the server:
