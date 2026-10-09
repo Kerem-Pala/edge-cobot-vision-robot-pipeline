@@ -28,12 +28,12 @@ while True:
         robotInterface.sendCommand(robot, x=x, y=y)
 
     cv.putText(frame, f"x:{int(x)}, Y: {int(y)}",(int(x),int(y)),1,1.0,(0,255,0),1)
-    cv.imshow('frame', frame)
+    #cv.imshow('frame', frame)
     
 
 
-    if cv.waitKey(1) == ord('q'):
-        break
+    #if cv.waitKey(1) == ord('q'):
+    #    break
     
 
 

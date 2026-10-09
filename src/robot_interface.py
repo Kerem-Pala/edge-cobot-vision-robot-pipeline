@@ -7,7 +7,7 @@ class robotInterface:
     def __init__(self):
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-        self.socket.connect(('127.0.0.1', 30000))
+        self.socket.connect(('host.docker.interal', 30000))
         print('Connection done')
 
     def sendCommand(self, x, y):
@@ -17,4 +17,3 @@ class robotInterface:
         self.socket.sendall(j_data.encode('utf-8'))
 
     
-        
