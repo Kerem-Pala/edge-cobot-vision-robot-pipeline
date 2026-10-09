@@ -46,7 +46,7 @@ python3 robot_server_test.py
 ```
 to do the tests:
 ```bash
-docker run --rm edge-cobot-vision-pipeline python -m unittest tests.transform_test
+docker run --rm edge-cobot-vision-robot-pipeline python -m unittest tests.transform_test
 
 ```
 to run:
