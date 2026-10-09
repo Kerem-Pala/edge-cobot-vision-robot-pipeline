@@ -31,7 +31,7 @@ def findRed(frame):
 
 
     if biggest_contour is not None:
-        biggest_area = cv.contourArea(biggest_contour)
+        
 
         x, y, w, h = cv.boundingRect(biggest_contour)
 
