@@ -40,5 +40,7 @@ docker build -t edge-cobot-vision .
 docker run -it edge-cobot-vision
 
 ```
+for deployment with docker it is needed to comment out 
+`cv.imShow()` and `cv.waitKey()` lines because docker does not have an GUI.
 
 #### the project's code is yet to be commented... 
