@@ -51,7 +51,7 @@ docker run --rm edge-cobot-vision-robot-pipeline python -m unittest tests.transf
 ```
 to run:
 ```bash
-docker run --rm edge-cobot-vision-pipeline_copy
+docker run --rm edge-cobot-vision-robot-pipeline
 ```
 for running locally without docker it is needed to uncomment 
 `cv.imShow()` and `cv.waitKey()` lines because docker does not have an GUI they are commented. also at `robot_interface.py` the host should be `127.0.0.1` instead of `host.docker.internal` and on `robot_server_test.py` the `HOST = '0.0.0.0'` should be `127.0.0.1` too.
