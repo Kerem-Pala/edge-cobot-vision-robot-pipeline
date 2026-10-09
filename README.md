@@ -35,12 +35,25 @@ python3 main.py
 
 ## How to deploy
 the pipeline fully containerized to be able to deploy it on industrial edge pc's.
+to build the project:
 ```bash
-docker build -t edge-cobot-vision .
-docker run -it edge-cobot-vision
+docker build -t edge-cobot-vision-robot-pipeline .
 
 ```
-for deployment with docker it is needed to comment out 
-`cv.imShow()` and `cv.waitKey()` lines because docker does not have an GUI.
+after that run the server:
+```bash
+python3 robot_server_test.py
+```
+to do the tests:
+```bash
+docker run --rm edge-cobot-vision-robot-pipeline python -m unittest tests.transform_test
+
+```
+to run:
+```bash
+docker run --rm edge-cobot-vision-robot-pipeline
+```
+for running locally without docker it is needed to uncomment 
+`cv.imShow()` and `cv.waitKey()` lines because docker does not have an GUI they are commented. also at `robot_interface.py` the host should be `127.0.0.1` instead of `host.docker.internal` and on `robot_server_test.py` the `HOST = '0.0.0.0'` should be `127.0.0.1` too.
 
 #### the project's code is yet to be commented... 
